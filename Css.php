@@ -5,22 +5,15 @@ namespace infrajs\controller\ext;
 
 use infrajs\controller\Controller;
 
-class css
+class Css
 {
-	public function check(&$layer)
+	public static $ready=array();
+	public static function check(&$layer)
 	{
-		if (!isset($layer['css'])) {
-			return;
-		}
-		$sotre = Controller::store();
-		if (!$store['css']) {
-			$store['css'] = array();
-		}
-		if ($store['css'][$css]) {
-			return;
-		}
-		Each::fora($layer['css'], function ($css) use (&$layer, &$store) {
-			$store['css'][$css] = true;
+		if (!isset($layer['css'])) return;
+		if (static::$ready[$css]) return;
+		Each::fora($layer['css'], function ($css) use (&$layer) {
+			Css::$ready[$css] = true;
 			$code = Load::loadTEXT($css);
 			View::html('<style>'.$code.'</style>', $layer['div']);
 		});
