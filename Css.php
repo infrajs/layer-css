@@ -16,6 +16,7 @@ class Css
 			Css::$ready[$css] = true;
 			$code = Load::loadTEXT($css);
 			View::html('<style>'.$code.'</style>', $layer['div']);
+			$r=null; return $r;
 		});
 	}
 }
