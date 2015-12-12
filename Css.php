@@ -1,7 +1,7 @@
 <?php
 
 //Свойство css	
-namespace infrajs\controller\ext;
+namespace infrajs\controller;
 
 use infrajs\controller\Controller;
 
