@@ -3,7 +3,7 @@ namespace infrajs\layer\css;
 use infrajs\controller\Layer;
 use infrajs\event\Event;
 use infrajs\path\Path;
-use infrajs\infra\Config;
+use infrajs\config\Config;
 
 Config::get('controller');
 
