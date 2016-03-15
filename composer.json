@@ -3,5 +3,12 @@
 	"license": "GPL3",
 	"autoload": {
 		"psr-4": { "infrajs\\layer\\css\\": "/" }
+	},
+	"require":{
+		"infrajs/each":"~1",
+		"infrajs/load":"~1",
+		"infrajs/controller":"~1",
+		"infrajs/event":"~1",
+		"infrajs/view":"~1"
 	}
 }

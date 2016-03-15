@@ -4,6 +4,9 @@
 namespace infrajs\layer\css;
 
 use infrajs\controller\Controller;
+use infrajs\each\Each;
+use infrajs\load\Load;
+use infrajs\view\View;
 
 class Css
 {
