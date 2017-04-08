@@ -14,8 +14,8 @@ class Css
 	public static function check(&$layer)
 	{
 		if (!isset($layer['css'])) return;
-		if (static::$ready[$css]) return;
-		Each::fora($layer['css'], function ($css) use (&$layer) {
+		Each::exec($layer['css'], function &($css) use (&$layer) {
+			if (!empty(static::$ready[$css])) return;
 			Css::$ready[$css] = true;
 			$code = Load::loadTEXT($css);
 			View::html('<style>'.$code.'</style>', $layer['div']);
