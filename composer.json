@@ -1,6 +1,5 @@
 {
 	"name": "infrajs/layer-css",
-	"license": "GPL3",
 	"autoload": {
 		"psr-4": { "infrajs\\layer\\css\\": "/" }
 	},
